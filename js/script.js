@@ -46,30 +46,39 @@ const findCity = () => {
                     // set background image according to weather condition
                     if (weatherCondition == 'Clouds') {
                         document.body.style.background = 'url("./images/bg-image.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Clear') {
                         document.body.style.background = 'url("./images/bg-clear.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Rain') {
                         document.body.style.background = 'url("./images/bg-rain.webp") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Drizzle') {
                         document.body.style.background = 'url("./images/bg-drizzles.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Mist') {
                         document.body.style.background = 'url("./images/bg-mist.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Haze') {
                         document.body.style.background = 'url("./images/bg-haze.png") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Fog') {
                         document.body.style.background = 'url("./images/bg-fog.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Sand') {
                         document.body.style.background = 'url("./images/bg-sand.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
                     else if (weatherCondition == 'Snow') {
                         document.body.style.background = 'url("./images/bg-snow.jpg") no-repeat';
+                        document.body.style.backgroundSize = 'cover';
                     }
 
                 }
@@ -121,30 +130,39 @@ const currentLocationTempDisplay = (cityName) => {
             if (weatherCondition == 'Clouds') {
                 console.log(weatherCondition);
                 document.body.style.background = 'url("./images/bg-image.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Clear') {
                 document.body.style.background = 'url("./images/bg-clear.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Rain') {
                 document.body.style.background = 'url("./images/bg-rain.webp") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Drizzle') {
                 document.body.style.background = 'url("./images/bg-drizzles.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Mist') {
                 document.body.style.background = 'url("./images/bg-mist.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Haze') {
                 document.body.style.background = 'url("./images/bg-haze.png") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Fog') {
                 document.body.style.background = 'url("./images/bg-fog.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Sand') {
                 document.body.style.background = 'url("./images/bg-sand.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
             else if (weatherCondition == 'Snow') {
                 document.body.style.background = 'url("./images/bg-snow.jpg") no-repeat';
+                document.body.style.backgroundSize = 'cover';
             }
         })
 }
