@@ -81,7 +81,7 @@ const findCity = () => {
 
 // find location of current user
 const findLocation = () => {
-    fetch('http://ip-api.com/json/?fields=61439')
+    fetch('https://ip-api.com/json/?fields=61439')
         .then(res => res.json())
         .then(data => {
             let cityName = data.city;
