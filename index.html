@@ -16,6 +16,31 @@
             background-size: cover;
             height: auto;
         }
+
+        #loading {
+            width: 2rem;
+            height: 2rem;
+            border: 5px solid #f3f3f3;
+            border-top: 6px solid #9c41f2;
+            border-radius: 100%;
+            margin: auto;
+            visibility: hidden;
+            animation: spin 1s infinite linear;
+        }
+
+        #loading.display {
+            visibility: visible;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
     </style>
 </head>
 
@@ -29,11 +54,7 @@
                     <button onclick="findCity()" type="button" class="btn btn-danger">Search</button>
                 </div>
             </div>
-            <div class="text-center">
-                <div class="spinner-border text-primary" role="status">
-                    <span class="sr-only">Loading...</span>
-                </div>
-            </div>
+            <div id="loading"></div>
         </form>
         <div id="main-parent" class="weather-status text-white text-center">
 

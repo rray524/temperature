@@ -1,5 +1,20 @@
-const loader = document.querySelector('.spinner-border');
-loader.style.display = 'none';
+// selecting loading div
+const loader = document.querySelector("#loading");
+
+// showing loading
+function displayLoading() {
+    loader.classList.add("display");
+    // to stop loading after some time
+    setTimeout(() => {
+        loader.classList.remove("display");
+    }, 7000);
+}
+
+// hiding loading 
+function hideLoading() {
+    loader.classList.remove("display");
+}
+
 // function after click on search button
 const findCity = () => {
 
@@ -11,9 +26,11 @@ const findCity = () => {
     else {
 
         let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=d6596da12267cf90a69ac685c356aa5d`;
+        displayLoading()
         fetch(url)
             .then(res => res.json())
             .then(data => {
+                hideLoading()
                 if (data.message == "city not found") {
                     alert('Provide a correct city name');
                     document.getElementById('city-name').value = '';
@@ -90,9 +107,11 @@ const findCity = () => {
 
 // find location of current user
 const findLocation = () => {
+    displayLoading()
     fetch('https://freegeoip.app/json/')
         .then(res => res.json())
         .then(data => {
+            hideLoading()
             let cityName = data.city;
             // call weather function to display weather according to user location
             currentLocationTempDisplay(cityName);
@@ -166,3 +185,4 @@ const currentLocationTempDisplay = (cityName) => {
             }
         })
 }
+
