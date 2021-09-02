@@ -14,24 +14,24 @@ function displayLoading() {
 function hideLoading() {
     loader.classList.remove("display");
 }
-
+const API_KEY = `3b0c1475d96c7d279adc53ad10e76b34`;
 // function after click on search button
 const findCity = () => {
 
     let cityName = document.getElementById('city-name').value;
-    const API_KEY = `f0325336df6aee5c1472f16642e5248e`;
     const findParent = document.getElementById('main-parent');
     if (cityName == '') {
         alert('Enter a city Name First');
     }
     else {
 
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`;
-        displayLoading()
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${API_KEY}`;
+        displayLoading();
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                hideLoading()
+                hideLoading();
+                console.log(data);
                 if (data.message == "city not found") {
                     alert('Provide a correct city name');
                     document.getElementById('city-name').value = '';
@@ -125,11 +125,11 @@ findLocation();
 // weather api function
 const currentLocationTempDisplay = (cityName) => {
     const findParent = document.getElementById('main-parent');
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=d6596da12267cf90a69ac685c356aa5d`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`)
         .then(res => res.json())
         .then(data => {
             console.log(data);
-            const cloudImg = data.weather[0].icon;
+            const cloudImg = data.weather.icon;
             const tempReal = Math.round(data.main.temp);
             const tempFeel = Math.round(data.main.feels_like);
             const cityLocation = data.name;
