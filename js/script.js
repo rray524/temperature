@@ -19,7 +19,7 @@ function hideLoading() {
 const findCity = () => {
 
     let cityName = document.getElementById('city-name').value;
-    const API_KEY = `d6596da12267cf90a69ac685c356aa5d`;
+    const API_KEY = `f0325336df6aee5c1472f16642e5248e`;
     const findParent = document.getElementById('main-parent');
     if (cityName == '') {
         alert('Enter a city Name First');
