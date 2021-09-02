@@ -19,13 +19,14 @@ function hideLoading() {
 const findCity = () => {
 
     let cityName = document.getElementById('city-name').value;
+    const API_KEY = `d6596da12267cf90a69ac685c356aa5d`;
     const findParent = document.getElementById('main-parent');
     if (cityName == '') {
         alert('Enter a city Name First');
     }
     else {
 
-        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=d6596da12267cf90a69ac685c356aa5d`;
+        let url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`;
         displayLoading()
         fetch(url)
             .then(res => res.json())
